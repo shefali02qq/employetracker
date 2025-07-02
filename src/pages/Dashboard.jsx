@@ -5,6 +5,7 @@ import MemberCard from '../components/MemberCard';
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import StatusSelector from '../components/StatusSelector';
+import StatusPieChart from '../components/StatusPieChart';
 
 const statusList = ['Working', 'Break', 'Meeting', 'Offline'];
 
@@ -41,6 +42,9 @@ function Dashboard() {
           <div className="dashboard-section">
             <div style={{ marginBottom: 8, fontWeight: 'bold' }}>Team Member Status Monitor</div>
             <div style={{ marginBottom: 8, fontSize: 14 }}>{statusSummary}</div>
+            <div style={{ marginBottom: 16 }}>
+              <StatusPieChart members={members} />
+            </div>
             <div style={{ marginBottom: 8 }}>
               <label>Status Filter: </label>
               <select value={filter} onChange={e => setFilter(e.target.value)} style={{ marginRight: 10 }}>
