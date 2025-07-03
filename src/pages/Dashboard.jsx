@@ -10,7 +10,7 @@ import StatusPieChart from '../components/StatusPieChart';
 const statusList = ['Working', 'Break', 'Meeting', 'Offline'];
 
 function Dashboard() {
-  const { currentRole, currentUser } = useSelector(state => state.role);
+  const { currentRole, currentUser } = useSelector(state => state.role); 
   const members = useSelector(state => state.members.members);
   const [filter, setFilter] = useState('All');
   const [sort, setSort] = useState(false);
